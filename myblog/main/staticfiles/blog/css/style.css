@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.container{
+
+
+    width: 100%;
+    height: 740px;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    padding: 0 8%;
+    position: relative;
+}
+
+
+/* nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+    color: white;
+}
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+    height: 60px;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+    
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+    text-decoration: none;
+    
+
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    transition:width 0.4s ;
+
+}
+
+
+nav ul li a:hover::after{
+    width: 50%;
+
+} */
+
+.text-box{
+    color: #ffffff;
+    position: absolute;
+    bottom: 24%;
+}
+
+.text-box p{
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.text-box h1{
+    font-size: 80px;
+    line-height: 140px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    background: url(/img/back.png);
+    /* -webkit-background-clip : text; */
+    background-position:0 0 ;
+    animation: black 20s linear infinite;
+
+}
+
+@keyframes back{
+    100%{
+        background-position:2000px 0 ;
+    }
+}
+
+.text-box h3{
+    font-size: bold;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex:wrap;
+    margin-top: 30px;
+
+
+}
+
+.text-box a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.text-box a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+    width: 40px;}
+
+    .social-icons{
+        position: absolute;
+        right: 5%;
+        bottom: 8%;
+    }
+    
+
+    .social-icons img{
+        width:25px;
+        display: block;
+        margin: 25px 5px;
+    }
+
+
+   .blogContainer{
+
+    text-align: center;
+   }
+
+
+
+
+
+    .blogContainer h1{
+        color: #ffffff;
+        
+    }
+
+    .blogItem p{
+        color: #ffffff;
+    }
+
+
+    .blogItem{
+
+        margin: 40px;
+
+
+
+
+    }
+
+
+
+    .btn{
+
+        margin: 7px auto;
+        border: 2px solid hotpink;
+        cursor: pointer;
+        padding: 10px 10px;
+        border-radius: 8px;
+         
+    }
+
+
+    .btn:hover{
+
+        background: rgb(139, 137, 19);
+    }
+

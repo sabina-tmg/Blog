@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<div class="container">
+<h1 class="my-3">
+    {{blog.title}}
+</h1>
+<div class="my-3">
+    {{blog.content|safe}}
+    {% comment %} this safe will parse the html file written inside the content inside admin directly {% endcomment %}
+</div>
+
+<div class="container">
+    
+    <h4>Comments....</h4>
+    {% for comment in comments %}
+    <p>
+    {{comment.name}} commented {{comment.Comment}}
+    </p>
+    {% endfor %}
+
+    <form action="{% url 'postcomment' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Name</label>
+            <input class="form-control" name="name" id="comment" />
+        </div>
+
+        <div class="form-group">
+            <label for="comment">email</label>
+            <input class="form-control" name="email" id="comment" type="email" />
+        </div>
+
+        <input type="hidden" name="post_id" value="{{blog.slug}}">
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+</div>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'main/css/homepost.css' %}"> 
+{% endblock css_files %}
+
+{% block title %}All Blogs{% endblock title %}
+
+
+
+{% block body %}
+<div class="container">
+    <h1>Welcome to the  coders blog.</h1>
+    {% for blog in blogs reversed %}
+      {% comment %} reversed is used to reverse the order of the blogs. The most recent blog will be at the top. {% endcomment %}
+      <div class="my-3" style="border: 1px solid rgb(12, 4, 4); background-color: rgb(142, 140, 150);">
+        <h3 class="text-dark" style="font-size: 1.5em; font-weight: bold;">
+          <a href="/blogpost/{{blog.slug}}" class="text-dark">{{blog.title}}</a>
+        </h3>
+        <div class="my-4">
+          {{blog.content|striptags|slice:200}}...
+        </div>
+        <a href="/blogpost/{{blog.slug}}" class="text-dark">
+          <button class="btn btn-primary">Read More</button>
+        </a>
+        {{blog.time}}
+      </div>
+    {% endfor %}
+  </div>
+  
+
+{% endblock body %}

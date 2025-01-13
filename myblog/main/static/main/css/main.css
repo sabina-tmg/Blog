@@ -1,0 +1,15 @@
+/* h1{
+    color: brown;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+h1 {
+  color: rgb(105, 98, 98);
+}
+p {
+  color: rgb(8, 2, 2);
+  font-size: 18px;
+}

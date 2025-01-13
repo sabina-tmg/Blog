@@ -1,0 +1,57 @@
+<!-- contact.html -->
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
+{% endblock css_files %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block body %}
+ <!-- Contact Area Start -->
+ <div class="contact_section_2 layout_padding my-5">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="form-container form-container-1">
+               <form method="POST" action="{% url 'contact' %}">
+                  {% csrf_token %}
+                  <h1 style="color: #021011d8; font-size: 50px; border-bottom: 3px solid #0f0438;" class="text-center"><b>GET IN TOUCH</b></h1>
+                  <div class="form">
+                     {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-dark fade show text-center my-3" role="alert">
+                            <strong></strong>{{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                     {% endif %}
+                     <label for="name">Name:</label>
+                     <input required placeholder="Enter your name" type="text" class="input" name="name" id="name">
+                     
+                     <label for="email">Email:</label>
+                     <input required placeholder="Email" type="email" class="input" name="email" id="email">
+                     
+                     <label for="phone">Phone Number:</label>
+                     <input required placeholder="Phone Number" type="tel" class="input" name="phone" id="phone"><br><br>
+                     
+                     <label for="msg">Message:</label>
+                     <textarea required placeholder="Say Hello" rows="4" cols="30" id="msg" name="message" class="input"></textarea>
+                     
+                     <div class="button-container">
+                        <input type="submit" value="Send" class="send-button">
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Contact Area End -->
+
+{% endblock %}

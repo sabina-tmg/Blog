@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %} 
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+{% endblock css_files %}
+
+{% block title %}
+page
+{% endblock title %}
+
+
+{% block body %}
+  
+    {% comment %} <title>Welcome to My Blog</title> {% endcomment %}
+ 
+{% comment %}  
+    <h1>Welcome to My Blog</h1>
+    <p>Thank you for visiting my blog! Here you will find articles on a variety of topics that I am passionate about. I hope you enjoy reading them as much as I enjoy writing them.</p>
+    <p>Feel free to explore the different categories on the menu above or search for specific topics using the search bar. Don't forget to leave a comment or follow me to stay updated on new posts!</p>
+
+ 
+    
+    <footer>
+      <p>Copyright 2021 My Home Page</p>
+    </footer> {% endcomment %}
+
+    <div class="container">
+      {% comment %} <nav>
+          <img src="/img/this.png" class="logo">
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/Blog.html">Blog</a></li>
+              <li><a href="/Contact.html">Contact Us</a></li>
+              <li><a href="/Email.html">Email Us</a></li>
+          </ul>
+      </nav> {% endcomment %}
+
+      <div class="text-box">
+          <p>We're</p>
+          <h1>Nepali Girls Coders</h1>
+          <h3>Code With Us</h3>
+
+          <div class="row">
+              <a href="{% url 'blog' %}">Explore Us </a>
+              <a href="{% url 'contact' %}">Connect With Us <span>&#x21fe;</span></a>
+              <span>You can Explore more about us as well as <br> About
+                  Our Members</span>
+          </div>
+
+      </div>
+
+
+
+      <div class="social-icons">
+          <a href=""><img src="javascript:void(0)" alt="" class="fab fa-facebook">Facebook</a>
+          <a href=""><img src="/img/instagram.png" alt="">Instagram</a>
+          <a href=""><img src="/img/telegram.png" alt="">Tiktok</a>
+      </div>
+  </div>
+    
+
+{% endblock body %}
